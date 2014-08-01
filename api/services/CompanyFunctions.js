@@ -7,4 +7,4 @@ module.exports = {
   findByUserEmail: function(email, callback){
 
   }
-}
+};
