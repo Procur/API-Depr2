@@ -26,7 +26,7 @@
     "mongodb": "^1.4.8",
     "bcrypt": "^0.7.8",
     "forever": "^0.11.1",
-    "sails-mongo": "^0.10.0-rc5",
+    "sails-mongo": "https://github.com/balderdashy/sails-mongo/archive/0.10.0-rc5.tar.gz",
     "newrelic": "^1.9.1"
   },
   "scripts": {
