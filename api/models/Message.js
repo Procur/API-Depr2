@@ -1,36 +1,37 @@
 /**
-* Message.js
-*
-* @description :: TODO: You might write a short summary of how this model works and what it represents here.
-* @docs        :: http://sailsjs.org/#!documentation/models
-*/
+ * MessageController
+ *
+ * @description :: Server-side logic for managing messages
+ * @help        :: See http://links.sailsjs.org/docs/controllers
+ */
 
 module.exports = {
 
   attributes: {
 
-    show: function(req, res){
-
+    user: {
+      type: 'string',
+      required: true
     },
 
-    create: function(req, res){
-
+    recipient: {
+      type: 'string',
+      required: true,
     },
 
-    edit: function(req, res){
-
+    content: {
+      type: 'text',
+      required: true
     },
 
-    delete: function(req, res){
-
+    parent: {
+      type: 'string'
     },
 
-    send: function(req, res){
-
-    },
-
-    reply: function(req, res){
-
+    opened: {
+      type: 'boolean',
+      required: true
     }
   }
+
 };

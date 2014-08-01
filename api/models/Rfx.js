@@ -24,6 +24,10 @@ module.exports = {
       required: 'true'
     },
 
+    parent: {
+      type: 'string'
+    },
+
     content: {
       type: 'text',
       required: true
