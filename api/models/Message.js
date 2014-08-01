@@ -9,6 +9,28 @@ module.exports = {
 
   attributes: {
 
+    show: function(req, res){
+
+    },
+
+    create: function(req, res){
+
+    },
+
+    edit: function(req, res){
+
+    },
+
+    delete: function(req, res){
+
+    },
+
+    send: function(req, res){
+
+    },
+
+    reply: function(req, res){
+
+    }
   }
 };
-
