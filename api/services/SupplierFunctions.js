@@ -1,6 +1,6 @@
 module.exports = {
 
-  findBySiblingId: function(supplierId, callback){
+  findBySiblingId: function(buyerId, callback){
 
   },
 

@@ -14,5 +14,5 @@ module.exports = {
 
   findByUserId: function(id, callback){
 
-  },
-}
+  }
+};
