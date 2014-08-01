@@ -1,5 +1,7 @@
+var schedule = require('node-schedule');
+
+
 module.exports.scheduledTaskts = {
-  var schedule = require('node-schedule');
 
   reattemptVerification: function(){
 
