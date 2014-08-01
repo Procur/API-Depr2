@@ -9,7 +9,7 @@ module.exports = {
 
   tableName: 'user',
   schema: true,
-  adapter: 'mongo',
+  adapter: 'api',
 
   attributes: {
 
@@ -48,6 +48,10 @@ module.exports = {
     jobTitle: {
       type: 'string'
     },
+		companyAdministrator: {
+			type: 'boolean',
+			required: true
+		},
 
     //ASSOCIATIONS
     company: {
