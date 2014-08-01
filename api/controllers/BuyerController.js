@@ -20,7 +20,6 @@ module.exports = {
   },
 
   deactivate: function(req, res){
-    
-  }
 
+  }
 };
