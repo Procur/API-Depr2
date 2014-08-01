@@ -1,3 +1,3 @@
 # API
 
-a [Sails](http://sailsjs.org) application
+Central API for all Procur application services
