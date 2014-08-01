@@ -1,0 +1,145 @@
+FORMAT: 1A
+HOST: http://api.procur.com
+
+# Procur
+Notes API is a *short texts saving* service similar to its physical paper presence on your table.
+
+# Group Registration
+Registration related resources of the **Procur API**
+
+
+
+## Registration [/signup]
++ Parameters
+    + firstName (required, string, `Doctor`) ... First name of the user
+    + lastName (required, string, `Strangelove`) ...  Last name of the user
+    + email (required, string, `dstrangelove@procur.com`) ... User's email address
+    + password (required, string, `m1n3$h@ftG@p`) ... User's password
+
+
+### User Registration [POST]
+    
++ Request (application/json)
+    
+        {
+            "firstName": "Doctor",
+            "lastName": "Strangelove",
+            "email": "dstrangelove@procur.com",
+            "password": "m1n3$h@ftG@p"
+        }
+        
+
++ Response 201 (application/json)
+
+        {
+            "firstName": "Doctor",
+            "lastName": "Strangelove",
+            "email": "dstrangelove@procur.com",
+            "emailVerified": true,
+            "profileComplete": false,
+            "active": true,
+            "createdAt": "2014-06-15T16:10:58.710Z",
+            "updatedAt": "2014-06-15T16:10:58.710Z",
+            "token": "$2a$50$lccTmLXCO/328vKdgSwHpu8vnTamdWox98I2hcwx3OVfMwhAg97kW"
+        }
+
++ Response 400 (application/json)
+
+        {
+            "error": "Email already exists"
+        }
+        
+        {
+            "error": "Password invalid"
+        }
+
+
+        {
+            "error": "Email invalid"
+        }
+        
+        
+# Group User
+User related resources of the **Procur API**
+
+## User [/user/{id}]
+A single User object with all its details
+
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the User to perform action with. Has example value.
+
+### Retrieve a User [GET]
+            
++ Response 200 (application/json)
+
+            {
+                "firstName": "Doctor",
+                "lastName": "Strangelove",
+                "email": "dstrangelove@procur.com",
+                "emailVerified": true,
+                "profileComplete": false,
+                "active": true,
+                "createdAt": "2014-06-15T16:10:58.710Z",
+                "updatedAt": "2014-06-15T16:10:58.710Z",
+            }
+
+### Update a User [PUT]
++ Request (application/json)
+
+            {
+                "firstName": "Jack",
+                "lastName": "Ripper",
+                "email": "jripper@procur.com",
+            }
+
+
++ Response 200 (application/json)
+
+            {
+                "firstName": "Jack",
+                "lastName": "Ripper",
+                "email": "jripper@procur.com",
+                "emailVerified": true,
+                "profileComplete": false,
+                "active": true,
+                "createdAt": "2014-06-15T16:10:58.710Z",
+                "updatedAt": "2014-06-15T16:10:58.710Z",
+            }
+            
+### Deactivate a User [DELETE]
+            
++ Response 200 (application/json)
+
+            {
+                "firstName": "Doctor",
+                "lastName": "Strangelove",
+                "email": "dstrangelove@procur.com",
+                "emailVerified": true,
+                "profileComplete": false,
+                "active": true,
+                "createdAt": "2014-06-15T16:10:58.710Z",
+                "updatedAt": "2014-06-15T16:10:58.710Z",
+            }
+            
+# Group Company
+Company related resources of the **Procur API**
+
+## User [/user/{handle}]
+A single Company object with all its details
+
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the User to perform action with. Has example value.
+
+### Create a Company [POST]
+
++ Request (application/json)
+
+            {
+            
+            }
+            
++ Response 201 (appliction/json)
+
+            {
+            
+            }
