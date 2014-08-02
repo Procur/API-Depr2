@@ -26,7 +26,7 @@
     "mongodb": "^1.4.8",
     "newrelic": "^1.9.1",
     "rc": "~0.3.3",
-    "sails": "~0.10.0-rc11",
+    "sails": "^0.10.0-rc11",
     "sails-disk": "~0.10.0",
     "sails-mongo": "https://github.com/balderdashy/sails-mongo/archive/0.10.0-rc5.tar.gz",
     "waterline-errors": "^0.9.1",
