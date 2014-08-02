@@ -1,10 +1,18 @@
 module.exports = {
 
-  findByUserId: function(userId, callback){
+  findAllMembersById: function(companyId, callback){
 
   },
 
-  findByUserEmail: function(email, callback){
+  findAllMembersByHandle: function(companyId, callback){
+
+  },
+
+  findAllMembersByBuyerId: function(buyerId, callback){
+
+  },
+
+  findAllMembersBySupplierId: function(supplierId, callback){
 
   }
 };
