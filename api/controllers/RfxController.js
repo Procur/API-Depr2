@@ -24,7 +24,22 @@ module.exports = {
 	},
 
 	send: function(req, res){
+
+	},
+
+	setRead: function(req, res){
+
+	},
+
+	setContractAwarded: function(req, res){
+
+	},
+
+	setContractNotAwarded: function(req, res){
+
+	},
+
+	changeAwardedStatus: function(req, res){
 		
 	}
-
 };
