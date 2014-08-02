@@ -9,6 +9,14 @@ module.exports = {
 
   attributes: {
 
+    content: {
+      type: 'text'
+    },
+
+    note: {
+      type: 'text'
+    }
+
   }
 };
 

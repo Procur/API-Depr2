@@ -16,7 +16,12 @@ module.exports = {
   },
 
   show: function (req, res) {
-
+    var p = req.params;
+    Log.findOne({ id: p.id }, function(err, log){
+      errorHandler.serverError(err, res);
+      errorHandler.nullCollection(log, res);
+      return res.json(200, log);
+    });
   },
 
   create: function (req, res) {
@@ -28,7 +33,16 @@ module.exports = {
   },
 
   addNote: function (req, res) {
-
+    var p = req.params;
+    Log.findOne({ id: p.id }, function(err, log){
+      errorHandler.serverError(err, res);
+      errorHandler.nullCollection(log, res);
+      Log.update(log, { note: p.note }, function(err, log){
+        errorHandler.serverError(err, res);
+        errorHandler.nullCollection(log, res);
+        return res.json(202, log);
+      })
+    })
   },
 
   updateNote: function (req, res) {
