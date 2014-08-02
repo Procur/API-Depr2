@@ -58,7 +58,16 @@ module.exports = {
   },
 
   deleteNote: function (req, res) {
-
+    var p = req.params;
+    Log.findOne({ id: p.id }, function(err, log){
+      errorHandler.serverError(err, res);
+      errorHandler.nullCollection(log, res);
+      Log.update(log, { note: ''}, function(err, log){
+        errorHandler.serverError(err, res);
+        errorHandler.nullCollection(log, res);
+        return res.json(202, log);
+      });
+    });
   },
 
   setFlag: function (req, res) {
