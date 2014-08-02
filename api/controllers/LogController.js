@@ -9,7 +9,7 @@ module.exports = {
 
   index: function (req, res) {
     Log.find({ }).exec(function (err, logs) {
-      errorHandler.serverError(res, err);
+      errorHandler.serverError(err, res);
       errorHandler.nullCollection(logs, res);
       return res.json(200, logs);
     });
