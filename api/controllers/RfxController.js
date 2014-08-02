@@ -40,6 +40,10 @@ module.exports = {
 	},
 
 	changeAwardedStatus: function(req, res){
+
+	},
+
+	unsend: function(req, res){
 		
 	}
 };

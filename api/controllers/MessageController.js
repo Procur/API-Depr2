@@ -31,6 +31,14 @@ module.exports = {
 
 		reply: function(req, res){
 
+		},
+
+		setRead: function(req, res){
+
+		},
+
+		unsend: function(req, res){
+			
 		}
 	}
 };
