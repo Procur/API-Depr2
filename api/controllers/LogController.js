@@ -29,7 +29,15 @@ module.exports = {
   },
 
   destroy: function (req, res) {
-
+    var p = req.params;
+    Log.findOne({ id: p.id }, function(err, log){
+      errorHandler.serverError(err, res);
+      errorHandler.nullCollection(log, res);
+      Log.destroy({ id: log.id }, function(err){
+        errorHandler.serverError(err, res);
+        return res.json(202, "Log successfully destroyed.");
+      })
+    });
   },
 
   addNote: function (req, res) {
@@ -41,8 +49,8 @@ module.exports = {
         errorHandler.serverError(err, res);
         errorHandler.nullCollection(log, res);
         return res.json(202, log);
-      })
-    })
+      });
+    });
   },
 
   updateNote: function (req, res) {
