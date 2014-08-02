@@ -7,4 +7,23 @@
 
 module.exports = {
 
+  login: function(req, res){
+
+  },
+
+  logout: function(req, res){
+
+  },
+
+  verifyEmail: function(req, res){
+
+  },
+
+  resendVerificationEmail: function(req, res){
+
+  },
+
+  changePassword: function(req, res){
+
+  }
 };
