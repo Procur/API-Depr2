@@ -18,5 +18,17 @@ module.exports = {
         callback(messages);
       });
     });
+  },
+
+  findAllByRecipientUserId: function(recipientId, callback) {
+    User.findOne({ id: recipientId }, function(err, user){
+      errorHandler.serverError(err, res);
+      errorHandler.nullCollection(user, res);
+      Message.find({ recipient: user.id }).sort({ createdAt: 'desc' }).exec(function(err, messages){
+        errorHandler.serverError(err, res);
+        errorHandler.nullCollection(messages, res);
+        callback(messages);
+      });
+    });
   }
 }
