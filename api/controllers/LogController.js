@@ -71,7 +71,12 @@ module.exports = {
   },
 
   setFlag: function (req, res) {
-
+    var p = req.params;
+    LogFunctions.findById(p.id, function(log){
+      UserFunctions.findByApiToken(p.apitoken, function(user){
+        //Log.update(log, {}) hmmmm... a bit unsure here
+      });
+    });
   },
 
   unsetFlag: function (req, res) {
