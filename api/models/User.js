@@ -65,6 +65,12 @@ module.exports = {
       type: 'boolean',
       required: true
     },
+
+    globalAdministrator: {
+      type: 'boolean',
+      required: false
+    },
+
     toJSON: function() {
       var obj = this.toObject();
       delete obj.password;
