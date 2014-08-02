@@ -7,15 +7,15 @@
 
 module.exports = {
 
-	create: function(req, res){
+  create: function (req, res) {
 
-	},
+  },
 
-	destroy: function(req, res){
+  destroy: function (req, res) {
 
-	},
+  },
 
-	issueNewToken: function(req, res){
+  issueNewToken: function (req, res) {
 
-	}
+  }
 };

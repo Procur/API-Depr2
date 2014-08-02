@@ -7,20 +7,20 @@
 
 module.exports = {
 
-    index: function(req, res){
+  index: function (req, res) {
 
-    },
+  },
 
-    show: function(req,res){
+  show: function (req, res) {
 
-    },
+  },
 
-    makeAdmin: function(req, res){
+  makeAdmin: function (req, res) {
 
-    },
+  },
 
-    demote: function(req, res){
+  demote: function (req, res) {
 
-    }
+  }
 };
 

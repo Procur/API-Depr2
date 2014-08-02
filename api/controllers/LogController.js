@@ -7,39 +7,43 @@
 
 module.exports = {
 
-	index: function(req, res){
+  index: function (req, res) {
+    Log.find({ }).exec(function (err, logs) {
+      errorHandler.serverError(res, err);
+      errorHandler.nullCollection(logs, res);
+      return res.json(200, logs);
+    });
+  },
 
-	},
+  show: function (req, res) {
 
-	show: function(req, res){
+  },
 
-	},
+  create: function (req, res) {
 
-	create: function(req, res){
+  },
 
-	},
+  destroy: function (req, res) {
 
-	destroy: function(req, res){
+  },
 
-	},
+  addNote: function (req, res) {
 
-	addNote: function(req, res){
+  },
 
-	},
+  updateNote: function (req, res) {
 
-	updateNote: function(req, res){
+  },
 
-	},
+  deleteNote: function (req, res) {
 
-	deleteNote: function(req, res){
+  },
 
-	},
+  setFlag: function (req, res) {
 
-	setFlag: function(req, res){
+  },
 
-	},
+  unsetFlag: function (req, res) {
 
-	unsetFlag: function(req, res){
-
-	}
+  }
 };

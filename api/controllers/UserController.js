@@ -1,56 +1,55 @@
-
 module.eports = {
 
-	//GENERAL ACTIONS
+  //GENERAL ACTIONS
 
-	create: function(req, res){
+  create: function (req, res) {
 
-	},
+  },
 
-	show: function(req, res){
+  show: function (req, res) {
 
-	},
+  },
 
-	update: function(req, res){
+  update: function (req, res) {
 
-	},
+  },
 
-	deactivate: function(req, res){
+  deactivate: function (req, res) {
 
-	},
+  },
 
-	//COMPANY MEMBERSHIP ACTIONS
+  //COMPANY MEMBERSHIP ACTIONS
 
-	requestToJoinCompany: function(req, res){
+  requestToJoinCompany: function (req, res) {
 
-	},
+  },
 
-	joinCompany: function(req, res){
+  joinCompany: function (req, res) {
 
-	},
+  },
 
-	leaveCompany: function(req, res){
+  leaveCompany: function (req, res) {
 
-	},
+  },
 
-	//BUYER / SUPPLIER ACTIONS
+  //BUYER / SUPPLIER ACTIONS
 
-	setDefaultMode: function(req, res){
+  setDefaultMode: function (req, res) {
 
-	},
+  },
 
-	//ACCOUNT SETTINGS ACTIONS
+  //ACCOUNT SETTINGS ACTIONS
 
-	changeEmail: function(req, res){
+  changeEmail: function (req, res) {
 
-	},
+  },
 
-	addProfileImage: function(req, res){
+  addProfileImage: function (req, res) {
 
-	},
+  },
 
-	changeProfileImage: function(req, res){
+  changeProfileImage: function (req, res) {
 
-	}
+  }
 
 };
