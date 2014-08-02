@@ -51,6 +51,6 @@ module.eports = {
 
 	changeProfileImage: function(req, res){
 
-	},
+	}
 
 };

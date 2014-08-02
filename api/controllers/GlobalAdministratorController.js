@@ -15,7 +15,7 @@ module.exports = {
 
     },
 
-    create: function(req, res){
+    makeAdmin: function(req, res){
 
     },
 
