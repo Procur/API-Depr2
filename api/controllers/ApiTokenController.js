@@ -13,6 +13,9 @@ module.exports = {
 
 	destroy: function(req, res){
 
+	},
+
+	issueNewToken: function(req, res){
+
 	}
-	
 };
