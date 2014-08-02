@@ -1,9 +1,9 @@
 /**
-* ApiToken.js
-*
-* @description :: TODO: You might write a short summary of how this model works and what it represents here.
-* @docs        :: http://sailsjs.org/#!documentation/models
-*/
+ * ApiToken.js
+ *
+ * @description :: TODO: You might write a short summary of how this model works and what it represents here.
+ * @docs        :: http://sailsjs.org/#!documentation/models
+ */
 
 module.exports = {
 
@@ -26,7 +26,7 @@ module.exports = {
     expired: {
       type: 'boolean'
     },
-    toJSON: function() {
+    toJSON: function () {
       var obj = this.toObject();
       delete obj.activeUntil;
       delete obj.createdAt;
