@@ -54,7 +54,14 @@ module.exports = {
   },
 
   updateNote: function (req, res) {
-
+    var p = req.params;
+    LogFunctions.findById(p.id, function(log){
+      Log.update(log, { note: '' }, function(err, log){
+        errorHandler.serverError(err, res);
+        errorHandler.nullCollection(log, res);
+        return res.json(202, log);
+      });
+    });
   },
 
   deleteNote: function (req, res) {
