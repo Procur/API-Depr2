@@ -15,8 +15,11 @@ module.exports = {
 
     note: {
       type: 'text'
-    }
+    },
 
+    flag: {
+      type: 'array'
+    }
   }
 };
 
