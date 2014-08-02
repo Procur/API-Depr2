@@ -64,7 +64,8 @@ module.exports = {
 
     //ASSOCIATIONS
     users: {
-      model: 'User'
+      collection: 'User',
+      via: 'company'
     },
     buyer: {
       model: 'Buyer'
