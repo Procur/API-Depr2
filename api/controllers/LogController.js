@@ -24,10 +24,6 @@ module.exports = {
     });
   },
 
-  create: function (req, res) {
-
-  },
-
   destroy: function (req, res) {
     var p = req.params;
     Log.findOne({ id: p.id }, function(err, log){
