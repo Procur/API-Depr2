@@ -14,7 +14,6 @@
  * Note: If you're using version control, you should put your passwords/api keys
  * in `config/local.js`, environment variables, or use another strategy.
  * (this is to prevent you inadvertently sensitive credentials up to your repository.)
- *
  * For more information on configuration, check out:
  * http://sailsjs.org/#/documentation/reference/sails.config/sails.config.connections.html
  */
