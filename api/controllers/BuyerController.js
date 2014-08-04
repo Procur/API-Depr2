@@ -21,5 +21,21 @@ module.exports = {
 
   deactivate: function (req, res) {
 
+  },
+
+  updateLogo: function(req, res) {
+
+  },
+
+  updateInformation: function(req, res) {
+
+  },
+
+  updateDescriptions: function(req,res) {
+
+  },
+
+  updatePreferences: function(req, res) {
+    
   }
 };
