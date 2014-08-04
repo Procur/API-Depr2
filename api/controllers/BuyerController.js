@@ -40,6 +40,6 @@ module.exports = {
   },
 
   updateSocialOutlets: function(req, res) {
-    
+
   }
 };
