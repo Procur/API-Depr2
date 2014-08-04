@@ -36,6 +36,10 @@ module.exports = {
   },
 
   updatePreferences: function(req, res) {
+
+  },
+
+  updateSocialOutlets: function(req, res) {
     
   }
 };
