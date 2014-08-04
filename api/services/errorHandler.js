@@ -6,7 +6,6 @@ module.exports = {
         if (log !== undefined) {
           return res.send(500, 'Lost in space!');
         }
-        ;
       });
     }
   },
