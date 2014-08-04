@@ -21,15 +21,6 @@
 
 module.exports.connections = {
 
-
-  /***************************************************************************
-  *                                                                          *
-  * Local disk storage for DEVELOPMENT ONLY                                  *
-  *                                                                          *
-  * Installed by default.                                                    *
-  *                                                                          *
-  ***************************************************************************/
-
   'default': 'api',
 
   api: {
