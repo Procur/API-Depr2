@@ -21,5 +21,25 @@ module.exports = {
 
   deactivate: function (req, res) {
 
+  },
+
+  showMember: function(req, res) {
+
+  },
+
+  inviteMember: function(req, res) {
+
+  },
+
+  kickMember: function(req, res) {
+
+  },
+
+  rejectMember: function(req, res) {
+
+  },
+
+  approveMember: function(req, res) {
+
   }
 };

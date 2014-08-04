@@ -10,6 +10,6 @@ module.exports = {
   heartbeat: function (req, res) {
     UserFunctions.finduser();
     res.send(200, 'Procur API v.0.01.0');
-  },
+  }
 
 };
