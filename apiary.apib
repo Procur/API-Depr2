@@ -46,7 +46,7 @@ User related resources of the **Procur API**
         
 ##Single User [/users/{id}]
 
-###Show User [GET]
+###Show [GET]
 
 + Request (application/json)
     
@@ -55,7 +55,7 @@ User related resources of the **Procur API**
         }
         
 
-+ Response 201 (application/json)
++ Response 200 (application/json)
 
         {
             "firstName": "Doctor",
@@ -67,4 +67,28 @@ User related resources of the **Procur API**
             "createdAt": "2014-06-15T16:10:58.710Z",
             "updatedAt": "2014-06-15T16:10:58.710Z",
             "token": "$2a$50$lccTmLXCO/328vKdgSwHpu8vnTamdWox98I2hcwx3OVfMwhAg97kW"
+        }
+      
+###Update [PUT]
+
++ Request (application/json)
+
+        {
+            "firstName": "Jack",
+            "lastName": "Ripper",
+            "email": "jripper@procur.com",
+        }
+        
++ Response 200
+        
+        {
+            "firstName": "Jack",
+            "lastName": "Ripper",
+            "email": "jripper@procur.com",
+            "emailVerified": true,
+            "profileComplete": false,
+            "active": true,
+            "createdAt": "2014-06-15T16:10:58.710Z",
+            "updatedAt": "2014-06-15T16:10:58.710Z",
+            "token": "$2a$50$lccTmLsCO/328vKdgSwHpu8vnTamdsox98I2hcwOVfMfiwhAg97kW"
         }
