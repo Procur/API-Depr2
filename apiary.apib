@@ -9,13 +9,6 @@ User related resources of the **Procur API**
 ##All Users [/users]
 
 ### Show [GET]
-    
-+ Request (application/json)
-    
-        {
-            
-        }
-        
 
 + Response 201 (application/json)
 
@@ -46,14 +39,11 @@ User related resources of the **Procur API**
         
 ##Single User [/users/{id}]
 
++ Parameters
+    + id (string) ... ID of the User object
+
+
 ###Show [GET]
-
-+ Request (application/json)
-    
-        {
-
-        }
-        
 
 + Response 200 (application/json)
 
@@ -129,21 +119,21 @@ Company related resources of the **Procur API**
             active: true,
             buyer: true,
             createdAt: ISODate("2014-06-18T20:22:14.937Z"),
-            email: "will@willricketts.com",
-            employeeCount: "",
+            email: "dstrangelove@procur.com",
+            employeeCount: "25",
             faxCountryCode: "1",
             faxExtension: "",
-            faxNumber: "4048499521",
-            handle: "ballast",
+            faxNumber: "5555555555",
+            handle: "strangelove",
             industry: "technology",
-            name: "Ballast.io",
+            name: "Doomsday Machines Inc.",
             phoneExtension: "",
             phoneNumber: "4048499521",
             phoneNumberCountryCode: "1",
-            supplier: false,
+            supplier: true,
             updatedAt: ISODate("2014-06-18T20:24:18.155Z"),
             user: "53a1f4c85e974a08005ea204",
-            website: "4048499521"
+            website: "http://procur.com"
         }
         
 ### Create [POST]
@@ -151,23 +141,67 @@ Company related resources of the **Procur API**
 + Request (application/json)
 
         {
-        
+            name: "Doomsday Machines, Inc.",
+            phoneNumberCountryCode: "1",
+            phoneNumber: "5555555555",
+            phoneExtension: "1",
+            email: "dstrangelove@procur.com",
+            website: "http://procur.com",
+            industry: "technology",
+            employeeCount: "25",
         }
         
 + Response 201
 
         {
-        
+            _id: ObjectId("53a1f4f65e974a08005ea206"),
+            active: true,
+            createdAt: ISODate("2014-06-18T20:22:14.937Z"),
+            email: "dstrangelove@procur.com",
+            employeeCount: "25",
+            faxCountryCode: "1",
+            faxExtension: "",
+            faxNumber: "5555555555",
+            handle: "strangelove",
+            industry: "technology",
+            name: "Doomsday Machines Inc.",
+            phoneExtension: "",
+            phoneNumber: "4048499521",
+            phoneNumberCountryCode: "1",
+            updatedAt: ISODate("2014-06-18T20:24:18.155Z"),
+            user: "53a1f4c85e974a08005ea204",
+            website: "http://procur.com"
         }
         
 ##Single Company [/companies/{id}]
+
++ Parameters
+    + id (string) ... ID of the Company object
 
 ### Show [GET]
 
 + Response 200
 
         {
-        
+            _id: ObjectId("53a1f4f65e974a08005ea206"),
+            active: true,
+            buyer: true,
+            createdAt: ISODate("2014-06-18T20:22:14.937Z"),
+            email: "dstrangelove@procur.com",
+            employeeCount: "25",
+            faxCountryCode: "1",
+            faxExtension: "",
+            faxNumber: "5555555555",
+            handle: "strangelove",
+            industry: "technology",
+            name: "Doomsday Machines Inc.",
+            phoneExtension: "",
+            phoneNumber: "3333333333",
+            phoneNumberCountryCode: "1",
+            supplier: true,
+            updatedAt: ISODate("2014-06-18T20:24:18.155Z"),
+            user: "53a1f4c85e974a08005ea204",
+            website: "http://procur.com"
         }
 
 ### Update [PUT]
@@ -175,13 +209,38 @@ Company related resources of the **Procur API**
 + Request (application/json)
 
         {
-        
+            name: "Mineshaft Gaps, LLC",
+            phoneNumberCountryCode: "1",
+            phoneNumber: "3333333333",
+            phoneExtension: "1",
+            email: "jripper@procur.com",
+            website: "http://procur.com",
+            industry: "technology",
+            employeeCount: "25",
         }
         
 + Response 200
 
         {
-        
+            _id: ObjectId("53a1f4f65e974a08005ea206"),
+            active: true,
+            buyer: true,
+            createdAt: ISODate("2014-06-18T20:22:14.937Z"),
+            email: "jripper@procur.com",
+            employeeCount: "25",
+            faxCountryCode: "1",
+            faxExtension: "",
+            faxNumber: "3333333333",
+            handle: "strangelove",
+            industry: "technology",
+            name: "Mineshaft Gaps, LLC",
+            phoneExtension: "",
+            phoneNumber: "5555555555",
+            phoneNumberCountryCode: "1",
+            supplier: true,
+            updatedAt: ISODate("2014-06-18T20:24:18.155Z"),
+            user: "53a1f4c85e974a08005ea204",
+            website: "http://procur.com"
         }
         
 ### Deactivate [DELETE]
@@ -189,55 +248,85 @@ Company related resources of the **Procur API**
 + Response 200
 
         {
-        
+            result: "Company successfully deactivated"
         }
         
 ##Company Members [/companies/{id}/members]
+
++ Parameters
+    + id (string) ... ID of the Company object
 
 ### Show [GET]
 
 + Response 200
 
-        {
-        
-        }
+        [
+            {
+                _id: ObjectId("53a1f4f65e974a08005ea206"),
+                "firstName": "Doctor",
+                "lastName": "Strangelove",
+                "email": "dstrangelove@procur.com",
+                "active": true,
+                "createdAt": "2014-06-15T16:10:58.710Z",
+                "updatedAt": "2014-06-15T16:10:58.710Z"
+            },
+            {
+                _id: ObjectId("53a1fgf42ef74a08001ea2a6"),
+                "firstName": "Jack",
+                "lastName": "Ripper",
+                "email": "jripper@procur.com",
+                "active": true,
+                "createdAt": "2014-06-15T16:10:58.710Z",
+                "updatedAt": "2014-06-15T16:10:58.710Z"
+            }
+        ]
         
 ### Invite Member [POST]
 
 + Request (application/json)
 
         {
-        
+            userId: "53a1fgf42ef74a08001ea2a6",
         }
         
 + Response 201
 
         {
-        
+            _id: ObjectId("53a1fgf42ef74a08001ea2a6"),
+            "firstName": "Jack",
+            "lastName": "Ripper",
+            "email": "jripper@procur.com",
+            "active": true,
+            "createdAt": "2014-06-15T16:10:58.710Z",
+            "updatedAt": "2014-06-15T16:10:58.710Z"
         }
         
-##Single Company Member [/companies/{id}/members/{memberId}]
+##Single Company Member [/companies/{id}/members/{userId}]
+
++ Parameters
+    + id (string) ... ID of the Company object
+    + userId (string) ... ID of the User object
 
 ### Show [GET]
 
 + Response 200
 
         {
-        
+            _id: ObjectId("53a1fgf42ef74a08001ea2a6"),
+            "firstName": "Jack",
+            "lastName": "Ripper",
+            "email": "jripper@procur.com",
+            "active": true,
+            "createdAt": "2014-06-15T16:10:58.710Z",
+            "updatedAt": "2014-06-15T16:10:58.710Z"
         }
         
 ### Modify [PUT]
-
-+ Request (application/json)
         
-        {
-
-        }
-        
-+ Response 200
++ Response 501
 
         {
-        
+            "Whoops."
         }
         
         
@@ -246,7 +335,13 @@ Company related resources of the **Procur API**
 + Response 200
 
         {
-        
+            _id: ObjectId("53a1fgf42ef74a08001ea2a6"),
+            "firstName": "Jack",
+            "lastName": "Ripper",
+            "email": "jripper@procur.com",
+            "active": true,
+            "createdAt": "2014-06-15T16:10:58.710Z",
+            "updatedAt": "2014-06-15T16:10:58.710Z"
         }
 
 ##Member Invitations [/companies/{id}/invitations]
@@ -255,22 +350,33 @@ Company related resources of the **Procur API**
 
 + Response 200
 
-        {
-        
-        }
+        [
+            {
+                _id: ObjectId("53a1f4f65e974a08005ea206"),
+                "firstName": "Doctor",
+                "lastName": "Strangelove",
+                "email": "dstrangelove@procur.com",
+                "active": true,
+                "createdAt": "2014-06-15T16:10:58.710Z",
+                "updatedAt": "2014-06-15T16:10:58.710Z"
+            },
+            {
+                _id: ObjectId("53a1fgf42ef74a08001ea2a6"),
+                "firstName": "Jack",
+                "lastName": "Ripper",
+                "email": "jripper@procur.com",
+                "active": true,
+                "createdAt": "2014-06-15T16:10:58.710Z",
+                "updatedAt": "2014-06-15T16:10:58.710Z"
+            }
+        ]
         
 ### Invite user to company [POST]
-
-+ Request (application/json)
-
-        {
-        
-        }
         
 + Response 200
 
         {
-        
+            userId: "53a1f4f65e974a08005ea206"
         }
         
 ##Single Invitation [/companies/{id}/invitations/{userId}]
@@ -280,7 +386,13 @@ Company related resources of the **Procur API**
 + Response 200
 
         {
-        
+            _id: ObjectId("53a1f4f65e974a08005ea206"),
+            "firstName": "Doctor",
+            "lastName": "Strangelove",
+            "email": "dstrangelove@procur.com",
+            "active": true,
+            "createdAt": "2014-06-15T16:10:58.710Z",
+            "updatedAt": "2014-06-15T16:10:58.710Z"
         }
 
 ### Revoke Pending Invitation [DELETE]
@@ -288,13 +400,19 @@ Company related resources of the **Procur API**
 + Request (application/json)
 
         {
-        
+            userId: "53a1f4f65e974a08005ea206"
         }
         
 + Response 200
 
         {
-        
+            _id: ObjectId("53a1f4f65e974a08005ea206"),
+            "firstName": "Doctor",
+            "lastName": "Strangelove",
+            "email": "dstrangelove@procur.com",
+            "active": true,
+            "createdAt": "2014-06-15T16:10:58.710Z",
+            "updatedAt": "2014-06-15T16:10:58.710Z"
         }
         
 ##Accepted Invitations [/companies/{id}/invitations/accepted]
@@ -303,9 +421,26 @@ Company related resources of the **Procur API**
 
 + Response 200
 
-        {
-        
-        }
+        [
+            {
+                _id: ObjectId("53a1f4f65e974a08005ea206"),
+                "firstName": "Doctor",
+                "lastName": "Strangelove",
+                "email": "dstrangelove@procur.com",
+                "active": true,
+                "createdAt": "2014-06-15T16:10:58.710Z",
+                "updatedAt": "2014-06-15T16:10:58.710Z"
+            },
+            {
+                _id: ObjectId("53a1fgf42ef74a08001ea2a6"),
+                "firstName": "Jack",
+                "lastName": "Ripper",
+                "email": "jripper@procur.com",
+                "active": true,
+                "createdAt": "2014-06-15T16:10:58.710Z",
+                "updatedAt": "2014-06-15T16:10:58.710Z"
+            }
+        ]
         
 ##Rejected Invitations [/companies/{id}/invitations/rejected]
 
@@ -313,9 +448,26 @@ Company related resources of the **Procur API**
 
 + Response 200
 
-        {
-        
-        }
+        [
+            {
+                _id: ObjectId("53a1f4f65e974a08005ea206"),
+                "firstName": "Doctor",
+                "lastName": "Strangelove",
+                "email": "dstrangelove@procur.com",
+                "active": true,
+                "createdAt": "2014-06-15T16:10:58.710Z",
+                "updatedAt": "2014-06-15T16:10:58.710Z"
+            },
+            {
+                _id: ObjectId("53a1fgf42ef74a08001ea2a6"),
+                "firstName": "Jack",
+                "lastName": "Ripper",
+                "email": "jripper@procur.com",
+                "active": true,
+                "createdAt": "2014-06-15T16:10:58.710Z",
+                "updatedAt": "2014-06-15T16:10:58.710Z"
+            }
+        ]
         
 # Group Buyers
 
