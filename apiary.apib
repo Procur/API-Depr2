@@ -539,6 +539,66 @@ Company related resources of the **Procur API**
 
 # Group Assets
 
+## Single Asset [/assets/{id}]
+<!--
+### Create [POST]
+TODO: How do we want to model this? -Nick
+-->
+
+### Show [GET]
+
++ Response 200
+
+        {
+            "_id": ObjectId("53c171d80b144d0800071be8"),
+            "title": "Acme Image",
+            "type": "image/jpeg",
+            "url": "http://s3.amazon.com/example.jpg",
+            "active": true, <!-- blah-->
+            "createdAt": ISODate("2014-06-18T20:22:14.937Z"),
+            "updatedAt": ISODate("2014-06-18T20:22:14.937Z"),
+            "owner": {
+                "buyer": "",
+                "supplier": "",
+                "company": "",
+                "user": "bd8a7c51fcb4f9c3391e59e0c4efaf39"
+            }
+        }
+
+### Update [POST]
+        
++ Request (application/json)
+
+        {
+            "title": "Acme Image 2"
+        }
+        
++ Response 200
+
+        {
+            "_id": ObjectId("53c171d80b144d0800071be8"),
+            "title": "Acme Image 2",
+            "type": "image/jpeg",
+            "url": "http://s3.amazon.com/example.jpg",
+            "active": true, <!-- blah-->
+            "createdAt": ISODate("2014-06-18T20:22:14.937Z"),
+            "updatedAt": ISODate("2014-06-15T16:10:58.710Z"),
+            "owner": {
+                "buyer": "",
+                "supplier": "",
+                "company": "",
+                "user": "bd8a7c51fcb4f9c3391e59e0c4efaf39"
+            }
+        }
+
+### Deactivate [DELETE]
+
++ Response 200
+
+        {
+            "result": "Asset successfully deactivated"
+        }
+
 # Group Messages
 
 # Group RFX
