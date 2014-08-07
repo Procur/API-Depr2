@@ -10,7 +10,7 @@ User related resources of the **Procur API**
 
 ### Show [GET]
 
-+ Response 201 (application/json)
++ Response 200 (application/json)
 
         [
             {
@@ -485,16 +485,18 @@ Company related resources of the **Procur API**
 
         {
             "_id": ObjectId("53c171d80b144d0800071be8"),
-            "name": "Iam Developer",
-            "position": "Purchasing Manager",
-            "email": "ideveloper@acme.com",
+            "contact": { 
+                "name": "Iam Developer",
+                "position": "Purchasing Manager",
+                "email": "ideveloper@acme.com",
+            },
             "createdAt": ISODate("2014-07-12T17:35:20.780Z"),
-            updatedAt: ISODate("2014-07-12T17:35:21.314Z"),
+            "updatedAt": ISODate("2014-07-12T17:35:21.314Z"),
             "company": "53c16e2b186bbc0800ff2c03",
             "companyType": "Association",
             "dba": "ACME Systems",
             "logo": "53c16e2b186bbc0800edcd",
-            "duns": "12348958973529087234",
+            "duns": "123489589",
             "acceptedCurrencies": [ "USD" ],
             "acceptedPaymentTerms": [ "MoneyGram" ],
             "active": true,
